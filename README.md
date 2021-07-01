@@ -15,7 +15,7 @@ For the padded sequences, the initial hidden state should be injected at the fir
 However, an easy mistake would be to fail to do this, and just inject `h0` at the first (padded) state.
 
 To test for this, we construct a dataset consisting of uniformly chosen sequence length between 1 and 16.
-The expected output at the end of the sequence is 1 for a sequence of length < 8, and 0 otherwise.
+The expected output at the end of the sequence is 1 for a sequence of length <= 8, and 0 otherwise.
 Inputs are always a vector of zeros at each timestep.
 
 ## Remembering an impulse
